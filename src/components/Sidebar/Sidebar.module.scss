@@ -1,0 +1,48 @@
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #001529;
+    z-index: 99;
+    
+    .sidebarLogo {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      
+      .sidebarLogoText {
+        color: white;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    
+    .sidebarMenu {
+      margin-top: 1em;
+      border-right: 0;
+      
+      :global {
+        .ant-menu-item {
+          margin: 0;
+          
+          &:hover {
+            background-color: #1890ff1a;
+          }
+          
+          &.ant-menu-item-selected {
+            background-color: #1890ff;
+            
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }

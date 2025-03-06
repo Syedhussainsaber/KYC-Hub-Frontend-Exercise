@@ -1,0 +1,108 @@
+.compareProducts {
+    padding: 24px;
+    
+    .compareHeader {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .titleSection {
+        display: flex;
+        flex-direction: column;
+        
+        .infoIcon {
+          font-size: 16px;
+          margin-left: 8px;
+          color: #1890ff;
+          cursor: pointer;
+        }
+        
+        .subtitle {
+          color: #8c8c8c;
+          font-size: 14px;
+          margin-top: 4px;
+        }
+      }
+    }
+    
+    .compareTable {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      
+      :global {
+        .ant-table-thead > tr > th {
+          background-color: #f5f5f5;
+        }
+      }
+      
+      .productTitle {
+        font-weight: 500;
+        color: #262626;
+      }
+      
+      .productCategory {
+        color: #8c8c8c;
+        font-size: 12px;
+      }
+      
+      .productPrice {
+        font-weight: 600;
+        color: #1890ff;
+      }
+      
+      .ratingContainer {
+        display: flex;
+        align-items: baseline;
+        
+        .ratingValue {
+          font-weight: 600;
+          font-size: 16px;
+          color: #faad14;
+        }
+        
+        .ratingMax {
+          color: #8c8c8c;
+          font-size: 12px;
+          margin-left: 2px;
+        }
+      }
+      
+      .removeButton {
+        transition: all 0.3s;
+        
+        &:hover {
+          background-color: #fff1f0;
+        }
+      }
+    }
+    
+    .emptyState {
+      background-color: #fafafa;
+      padding: 48px 0;
+      border-radius: 4px;
+      border: 1px dashed #d9d9d9;
+    }
+    
+    .productsModal {
+      .modalInfo {
+        margin-bottom: 16px;
+        padding: 8px 12px;
+        background-color: #e6f7ff;
+        border-radius: 4px;
+        color: #1890ff;
+        font-size: 14px;
+      }
+      
+      .modalTable {
+        :global {
+          .ant-table-row {
+            cursor: pointer;
+            
+            &:hover {
+              background-color: #f5f5f5;
+            }
+          }
+        }
+      }
+    }
+  }
