@@ -30,7 +30,7 @@ setSelectedProducts(products || []);
     if (selectedProducts.length <= 4 && !selectedProducts.some(p => p.id === product.id)) {
       const newSelected = [...selectedProducts, product];
       setSelectedProducts(newSelected);
-      localStorage.setItem('compareProducts', JSON.stringify(selectedProducts || '[]'));
+      localStorage.setItem('compareProducts', JSON.stringify(newSelected || '[]'));
 
       // User can be able to compare 4 products only
       if (newSelected.length > 4) {
@@ -184,6 +184,7 @@ setSelectedProducts(products || []);
       
       <Table
         columns={columns}
+        style={{width: "100%"}}
         dataSource={filteredProducts}
         loading={loading}
         pagination={{ pageSize: 10, showSizeChanger: true, showTotal: (total) => `Total ${total} products` }}
