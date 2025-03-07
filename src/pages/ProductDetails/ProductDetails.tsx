@@ -27,13 +27,13 @@ setSelectedProducts(products || []);
 }, [])
 
   const handleCompare = (product: Product) => {
-    if (selectedProducts.length <= 4 && !selectedProducts.some(p => p.id === product.id)) {
+    if (selectedProducts.length < 4 && !selectedProducts.some(p => p.id === product.id)) {
       const newSelected = [...selectedProducts, product];
       setSelectedProducts(newSelected);
       localStorage.setItem('compareProducts', JSON.stringify(newSelected || '[]'));
 
       // User can be able to compare 4 products only
-      if (newSelected.length > 4) {
+      if (newSelected.length >= 4) {
         navigate('/compare');
       }
     }
